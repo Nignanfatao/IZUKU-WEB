@@ -1,14 +1,13 @@
 {
-    "name": "web-qr",
+    "name": "OVL-qr",
     "version": "0.0.1",
-    "description": "A multi functional whatsapp bot Web Qr Scanner.",
+    "description": "Qr de liaison a whatsapp.",
     "main": "index.js",
     "scripts": {
       "test": "echo \"Error: no test specified\" && exit 1",
       "start": "node index.js"
-    },
-    "keywords": ["baileysQr","MdLogin", "Suhail-Md","whatsapp-bot","BotWhatsapp","whatsappMdLogin","adiwajshing/baileys","baileys-md-qr","multi-device-qr","md-qr","bot-qr","baileysQrScanner","wabot" ],
-    "author": "SuhailTechInfo",
+    "keyword": ["baleyQr", "whatsappbotQr", "Fatao",],
+    "author": "Fatao",
     "license": "MIT",
     "dependencies": {
       "@hapi/boom": "^10.0.1",
@@ -20,7 +19,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.dev/SuhailTechInfo/web-qr.git"
+        "url": "git+https://github.dev/Nignanfatao/OVL-qr.git"
     }
   }
   
