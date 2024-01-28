@@ -1,9 +1,9 @@
 {
     "name": "ovl-md",
-    "description": "salut je suis Obl-Md un bot multi-appareil developpé par @Ainz",
-    "logo": "https://telegra.ph/file/d5b1c3544fedc23e11a06.jpg",
+    "description": "salut je suis Obl-Md un bot multi-appareil developpé par @Fatao",
+    "logo": "https://telegra.ph/file/0d81626ca4a81fe93303a.jpg",
     "repository": "https://github.com/Nignanfatao/OVL-qr",
-    "keywords": ["whatsappbot", "multi-appareil", "ainz, "Ovl-Md"],
+    "keywords": ["whatsappbot", "multi-appareil", "ainz", "Ovl-Md"],
     "success_url": "/", 
     "buildpacks": [{ "url": "https://github.com/heroku/heroku-buildpack-nodejs#latest" } ],
     "env": {      
@@ -13,7 +13,7 @@
         "required": false 
       },
       "MESSAGE": {
-        "description": "set session id conformation message",
+        "description": "activation de la session-id et tu messsage de comfirmation",
         "value": "╔════◇\n║ *『 woooo Merci d'avoir Choisit OVL-MD 』*\n║ _Felicitation, vous vennez de passer la 1ere etape pour la creation de votre bot_\n╚════════════════════════╝\n╔═════◇\n║  『••• 𝗩𝗶𝘀𝗶𝘁 𝗙𝗼𝗿 𝗛𝗲𝗹𝗽 •••』\n║ *Owner:* _https://wa.me/2347039570336_\n║ *Note :*_Don't provide your SESSION_ID to_\n║ _anyone otherwise that can access chats_\n╚════════════════════════╝",
         "required": false 
       }
