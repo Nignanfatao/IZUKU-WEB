@@ -54,10 +54,9 @@ app.use("/", async (req, res) => {
           let user = ovl.user.id;
 
           let CREDS = fs.readFileSync(authInfoPath + '/creds.json')
-          var Scan_Id = Buffer.from(CREDS).toString('base64')
-          let mi = "Merci d'avoir choisie ovl-Md";
+          var Scan_Id = Buffer.from(CREDS).toString('base64');
           let msgsss = await ovl.sendMessage(user, { text: `Ovl;;; ${Scan_Id}` });
-          await ovl.sendMessage(user,{image: {url: "https://telegra.ph/file/0d81626ca4a81fe93303a.jpg"}, caption: mi }, { quoted: ms });
+          await ovl.sendMessage(user,{image: {url: "https://telegra.ph/file/0d81626ca4a81fe93303a.jpg"}, caption: "Merci d'avoir choisie ovl-Md"}, { quoted: ms });
           await delay(1000);
           try {
               await fs.emptyDirSync(authInfoPath);
