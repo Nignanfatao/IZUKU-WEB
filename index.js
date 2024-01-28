@@ -35,7 +35,7 @@ app.use("/", async (req, res) => {
 
   const store = makeInMemoryStore({ logger: pino().child({ level: 'silent', stream: 'store' }) });
 
-  async function ovl() {
+  async function ovls() {
     const { state, saveCreds } = await useMultiFileAuthState(authInfoPath);
     try {
       let ovl = OvlWASocket({ 
@@ -74,7 +74,7 @@ app.use("/", async (req, res) => {
             console.log("Connection perdue depuis le serveur !");
           } else if (reason === DisconnectReason.restartRequired) {
             console.log("Redémarrage requis, redémarrage en cours...");
-            ovl().catch(err => console.log(err));
+            ovls().catch(err => console.log(err));
           } else if (reason === DisconnectReason.timedOut) {
             console.log("Connexion expirée !");
           }  else {
@@ -89,7 +89,7 @@ app.use("/", async (req, res) => {
     }
   }
 
-  ovl().catch(async (err) => {
+  ovls().catch(async (err) => {
     console.log(err);
     await fs.emptyDirSync(authInfoPath);
     // MADE WITH
@@ -97,5 +97,3 @@ app.use("/", async (req, res) => {
 });
 
 app.listen(PORT, () => console.log(`App écoutée sur le port http://localhost:${PORT}`));
-
-module.exports = ovl;
