@@ -3,6 +3,7 @@ const express = require("express");
 const app = express();
 const pino = require("pino");
 const { toBuffer } = require("qrcode");
+const { Boom } = require("@hapi/boom");
 
 const PORT = process.env.PORT || 5000;
 
