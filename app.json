@@ -14,7 +14,7 @@
       },
       "MESSAGE": {
         "description": "activation de la session-id et tu messsage de comfirmation",
-        "value": "╔════◇\n║ *『 woooo Merci d'avoir Choisit OVL-MD 』*\n║ _Felicitation, vous vennez de passer la 1ere etape pour la creation de votre bot_\n╚════════════════════════╝\n╔═════◇\n║  『••• 𝗩𝗶𝘀𝗶𝘁 𝗙𝗼𝗿 𝗛𝗲𝗹𝗽 •••』\n║ *Owner:* _https://wa.me/2347039570336_\n║ *Note :*_Don't provide your SESSION_ID to_\n║ _anyone otherwise that can access chats_\n╚════════════════════════╝",
+        "value": "*『 woooo Merci d'avoir Choisit OVL-MD ",
         "required": false 
       }
     }   
