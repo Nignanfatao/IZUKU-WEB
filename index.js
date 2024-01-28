@@ -15,13 +15,13 @@ if (fs.existsSync('./auth_info_baileys')) {
 
 app.use("/", async (req, res) => {
   try {
-    const { default: OvlWASocket, useMultiFileAuthState, Browsers, delay, DisconnectReason, makeInMemoryStore } = require("@sampandey001/baileys");
+    const { default: suhailWASocket, useMultiFileAuthState, Browsers, delay, DisconnectReason, makeInMemoryStore } = require("@sampandey001/baileys");
     const store = makeInMemoryStore({ logger: pino().child({ level: 'silent', stream: 'store' }) })
 
     async function ovl() {
       const { state, saveCreds } = await useMultiFileAuthState(__dirname + '/auth_info_baileys');
       try {
-        let ovl = OvlWASocket({ 
+        let ovl = suhailWASocket({ 
           printQRInTerminal: false,
           logger: pino({ level: "silent" }), 
           browser: Browsers.baileys("Desktop"),
