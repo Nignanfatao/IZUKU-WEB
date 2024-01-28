@@ -6,7 +6,7 @@ const path = require('path');
 const fs = require("fs-extra");
 const { Boom } = require("@hapi/boom");
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || "5000";
 const MESSAGE = process.env.MESSAGE || "Merci d'avoir choisi Ovl-Md";
 
 if (fs.existsSync('./auth_info_baileys')) {
@@ -21,7 +21,7 @@ app.use("/", async (req, res) => {
     async function ovl() {
       const { state, saveCreds } = await useMultiFileAuthState(__dirname + '/auth_info_baileys');
       try {
-        let ex = OvlWASocket({ 
+        let ovl = OvlWASocket({ 
           printQRInTerminal: false,
           logger: pino({ level: "silent" }), 
           browser: Browsers.baileys("Desktop"),
@@ -66,7 +66,7 @@ SESSION-ID ==> ${Scan_Id}
               console.log("Connexion perdue avec le serveur !");
             } else if (reason === DisconnectReason.restartRequired) {
               console.log("Redémarrage requis, redémarrage...");
-              IZUKU().catch(err => console.log(err));
+              ovl().catch(err => console.log(err));
             } else if (reason === DisconnectReason.timedOut) {
               console.log("Connexion expirée !");
             } else {
