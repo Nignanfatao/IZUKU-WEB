@@ -30,7 +30,7 @@ try {
   console.error('Erreur lors du vidage du répertoire auth_info_baileys :', error);
 }
 
-/*app.use("/", async (req, res) => {
+app.use("/", async (req, res) => {
   const { default: OvlWASocket, useMultiFileAuthState, Browsers, delay, DisconnectReason, makeInMemoryStore } = require("@sampandey001/baileys");
 
   const store = makeInMemoryStore({ logger: pino().child({ level: 'silent', stream: 'store' }) });
@@ -96,10 +96,9 @@ try {
 });
 
 app.listen(PORT, () => console.log(`App écoutée sur le port http://localhost:${PORT}`));
-*/
 
 
-    app.use("/", async (req, res) => {
+    /*app.use("/", async (req, res) => {
   const { default: OvlWASocket, useMultiFileAuthState, Browsers, delay, DisconnectReason, makeInMemoryStore } = require("@sampandey001/baileys");
   const { toBuffer } = require('qrcode');
   const fs = require('fs');
@@ -195,3 +194,4 @@ app.listen(PORT, () => console.log(`App écoutée sur le port http://localhost:$
 });
 
 app.listen(PORT, () => console.log(`App écoutée sur le port http://localhost:${PORT}`));
+*/
