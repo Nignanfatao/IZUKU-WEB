@@ -1,4 +1,4 @@
-/*const fs = require("fs-extra");
+const fs = require("fs-extra");
 const express = require("express");
 const app = express();
 const pino = require("pino");
@@ -30,7 +30,7 @@ try {
   console.error('Erreur lors du vidage du répertoire auth_info_baileys :', error);
 }
 
-app.use("/", async (req, res) => {
+/*app.use("/", async (req, res) => {
   const { default: OvlWASocket, useMultiFileAuthState, Browsers, delay, DisconnectReason, makeInMemoryStore } = require("@sampandey001/baileys");
 
   const store = makeInMemoryStore({ logger: pino().child({ level: 'silent', stream: 'store' }) });
